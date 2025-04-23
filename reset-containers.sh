@@ -16,7 +16,7 @@ while getopts "n:h" opt; do
 done
 
 
-# Stop can remove the shared containers 
+# Stop and remove the shared containers 
 docker stop $(docker ps --filter="Name=$name" -qa)
 docker container rm  $(docker ps --filter="Name=$name" -qa)
 
