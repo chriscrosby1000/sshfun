@@ -14,7 +14,7 @@ Welcome to the SSH Obstacle Course — a fun and practical exercise designed to 
 
 ## To start the game
 
-Run as root (or a memeber of the docker group)
+Run as root (or a member of the docker group)
 > ./s.sh
 
 Log into the launchpad 
