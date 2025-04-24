@@ -319,7 +319,7 @@ cat << EOF > $currentLevel/Dockerfile
 FROM alpine:latest
 
 COPY $currentLevel-custom-motd.sh /etc/profile.d/custom-motd.sh
-COPY id_rsa /yek.txt
+COPY id_rsa /${host_names[4]}
 
 # Install OpenSSH
 RUN apk add --no-cache openssh figlet pv \
@@ -334,10 +334,7 @@ RUN apk add --no-cache openssh figlet pv \
     && chown $username:$username /home/$username/.ssh \
     && chmod 700 /home/$username/.ssh \
     && echo "#!/bin/sh" > /home/$username/.ash_profile \
-    && echo "ssh-keyscan -t ecdsa ${ips[4]} > /home/$username/.ssh/known-hosts" >> /home/$username/.ash_profile \
-    && chown $username:$username /home/$username/.ash_profile \
-    && chmod +x /home/$username/.ash_profile \
-    && chmod 444 /yek.txt \
+    && chmod 444 /${host_names[4]} \
     && echo '[ -f "\$HOME/.ash_profile" ] && . "\$HOME/.ash_profile"' >> /etc/profile \
     && echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config \
     && echo "PermitRootLogin no" >> /etc/ssh/sshd_config \
