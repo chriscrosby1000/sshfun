@@ -17,8 +17,11 @@ Welcome to the SSH Obstacle Course — a fun and practical exercise designed to 
 Run as root (or a member of the docker group)
 > ./s.sh
 
-Log into the launchpad 
-> ssh student@192.168.22.100 -p 2222
+If you are on the docker host simply log into the launchpad like this
+> ssh student@192.168.22.100
+
+If you are not on the docker host then log in using the mapped port from the launchpad container
+> ssh student@[docker host ip/hostname] -p 2222
 
 [![Image](https://i.imageupload.app/f7d3760d3ee127498961.png)](https://imageupload.app/f7d3760d3ee127498961)
 
