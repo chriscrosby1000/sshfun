@@ -1,6 +1,6 @@
 # The SSH Obstacle Course
 
-[![Image](https://i.imageupload.app/8d3b43f9c7e2fa5643f1.png)](https://imageupload.app/8d3b43f9c7e2fa5643f1)
+![Image](images/1745549610701.jpg)
 
 Welcome to the SSH Obstacle Course — a fun and practical exercise designed to teach users how to navigate and use SSH effectively. It can be easily deployed on a **CFTD instance** and supports **multiple players** on the same server.
 
@@ -23,7 +23,10 @@ If you are on the docker host simply log into the launchpad like this
 If you are not on the docker host then log in using the mapped port from the launchpad container
 > ssh student@[docker host ip/hostname] -p 2222
 
-[![Image](https://i.imageupload.app/f7d3760d3ee127498961.png)](https://imageupload.app/f7d3760d3ee127498961)
+If you are running this on a Mac, OSX handles container ports differently.  You'll need to use the following command
+>ssh student@127.0.0.1 -p 2222
+
+![Image](images/welcome.jpg)
 
 Goodluck!
 
