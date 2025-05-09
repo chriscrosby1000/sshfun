@@ -487,7 +487,9 @@ hint=""
 flag=""
 
 #Get the picture for the webpage
-wget -O picture.png https://i.imageupload.app/15b29769c100e9377643.png 
+#wget -O picture.png https://i.imageupload.app/15b29769c100e9377643.png 
+# Looks like imageupload is not more, but this is better it keeps it all self contained
+cat images/flag6.base64 | base64 -d > picture.png
 
 
 # Create the nginx conf file
